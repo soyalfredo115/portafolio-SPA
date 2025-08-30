@@ -1,0 +1,41 @@
+/* css/animations.css
+   Corrección: .view ya no oculta por defecto. Las animaciones
+   manejan la entrada/salida y al quitar la clase enter no
+   hará que el elemento vuelva a estar oculto.
+*/
+
+.view {
+  /* Estado base: visible. Las animaciones controlan la entrada/salida */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Entrada: animación desde opacidad 0 → 1 */
+.view-enter {
+  animation: viewEnter 280ms var(--trans) forwards;
+}
+
+/* Salida: animación de salida */
+.view-exit {
+  animation: viewExit 220ms var(--trans) forwards;
+}
+
+/* Keyframes */
+@keyframes viewEnter {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes viewExit {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-6px); }
+}
+
+/* Sutil slide para tarjetas dentro de proyectos */
+.card-fade-in {
+  animation: cardIn 360ms var(--trans) both;
+}
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

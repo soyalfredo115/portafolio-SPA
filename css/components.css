@@ -1,0 +1,46 @@
+.header {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(1.2) blur(6px);
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+.nav-left, .nav-right { display: flex; align-items: center; gap: 12px; }
+.logo { font-weight: 800; letter-spacing: 0.3px; }
+.nav a {
+  padding: 8px 12px; border-radius: 10px;
+  color: var(--muted);
+}
+.nav a.active { color: var(--fg); background: var(--card); border: 1px solid var(--border); }
+.theme-toggle {
+  border-radius: 10px; border: 1px solid var(--border);
+  background: var(--card); padding: 6px 10px; cursor: pointer;
+}
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 0; color: var(--muted);
+}
+.project-card {
+  display: grid; grid-template-columns: 1fr; gap: 10px; padding: 12px;
+}
+.project-card .meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; color: var(--muted); }
+.project-card .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag {
+  font-size: 12px; padding: 4px 8px; border: 1px solid var(--border);
+  background: #fff2; border-radius: 999px;
+}
+.kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px; padding: 2px 6px; border-radius: 6px;
+  background: var(--card); border: 1px solid var(--border);
+}
+.form {
+  display: grid; gap: 12px; max-width: 640px;
+}
+.input, .textarea {
+  width: 100%; padding: 12px 14px; border-radius: 12px;
+  border: 1px solid var(--border); background: var(--bg); color: var(--fg);
+}
+.textarea { min-height: 140px; resize: vertical; }
